@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main() {
+    float assessment, midterm, final_exam;
+    float total_marks;
+    
+    // Input assessment, mid-term, and final exam marks
+    printf("Enter the assessment mark: ");
+    scanf("%f", &assessment);
+    
+    printf("Enter the mid-term mark: ");
+    scanf("%f", &midterm);
+    
+    printf("Enter the final exam mark: ");
+    scanf("%f", &final_exam);
+    
+    // Calculate total marks
+    total_marks = assessment + midterm + final_exam;
+    
+    // Print grades based on total marks
+    printf("Total marks: %.2f\n", total_marks);
+    
+    if (total_marks >= 90) {
+        printf("Grade: A+\n");
+    } else if (total_marks >= 85) {
+        printf("Grade: A\n");
+    } else if (total_marks >= 80) {
+        printf("Grade: A-\n");
+    } else if (total_marks >= 75) {
+        printf("Grade: B+\n");
+    } else if (total_marks >= 70) {
+        printf("Grade: B\n");
+    } else if (total_marks >= 65) {
+        printf("Grade: B-\n");
+    } else if (total_marks >= 60) {
+        printf("Grade: C+\n");
+    } else if (total_marks >= 55) {
+        printf("Grade: C\n");
+    } else if (total_marks >= 50) {
+        printf("Grade: C-\n");
+    } else if (total_marks >= 45) {
+        printf("Grade: D+\n");
+    } else if (total_marks >= 40) {
+        printf("Grade: D\n");
+    } else {
+        printf("Grade: F\n");
+    }
+    
+    return 0;
+}
