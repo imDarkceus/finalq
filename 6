@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main() {
+    int marks[10];
+    int i;
+    int highest, lowest, total;
+    float average;
+    
+    // Input marks for 10 students
+    printf("Enter marks for 10 students:\n");
+    for (i = 0; i < 10; i++) {
+        printf("Enter marks for student %d: ", i + 1);
+        scanf("%d", &marks[i]);
+    }
+    
+    // Initialize highest and lowest with the first student's marks
+    highest = marks[0];
+    lowest = marks[0];
+    total = marks[0];
+    
+    // Find highest, lowest, and calculate total marks
+    for (i = 1; i < 10; i++) {
+        if (marks[i] > highest) {
+            highest = marks[i];
+        }
+        
+        if (marks[i] < lowest) {
+            lowest = marks[i];
+        }
+        
+        total += marks[i];
+    }
+    
+    // Calculate average marks
+    average = (float)total / 10.0;
+    
+    // Print highest, lowest, and average marks
+    printf("Highest marks: %d\n", highest);
+    printf("Lowest marks: %d\n", lowest);
+    printf("Average marks: %.2f\n", average);
+    
+    return 0;
+}
