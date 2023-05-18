@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+// Function to check if a number is prime
+int isPrime(int number) {
+    if (number <= 1) {
+        return 0;
+    }
+    
+    for (int i = 2; i * i <= number; i++) {
+        if (number % i == 0) {
+            return 0;
+        }
+    }
+    
+    return 1;
+}
+
+int main() {
+    int num1, num2;
+    
+    // Input two integers
+    printf("Enter the first integer: ");
+    scanf("%d", &num1);
+    
+    printf("Enter the second integer: ");
+    scanf("%d", &num2);
+    
+    // Print even numbers
+    printf("Even numbers between %d and %d:\n", num1, num2);
+    for (int i = num1; i <= num2; i++) {
+        if (i % 2 == 0) {
+            printf("%d ", i);
+        }
+    }
+    
+    // Print prime numbers
+    printf("\nPrime numbers between %d and %d:\n", num1, num2);
+    for (int i = num1; i <= num2; i++) {
+        if (isPrime(i)) {
+            printf("%d ", i);
+        }
+    }
+    
+    printf("\n");
+    
+    return 0;
+}
