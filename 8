@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+// Function to calculate the sum of four numbers
+int calculateSum(int a, int b, int c, int d) {
+    return a + b + c + d;
+}
+
+// Function to calculate the average of four numbers
+float calculateAverage(int sum) {
+    return (float)sum / 4.0;
+}
+
+int main() {
+    int num1, num2, num3, num4;
+    int sum;
+    float average;
+    
+    // Input four numbers
+    printf("Enter four numbers: ");
+    scanf("%d %d %d %d", &num1, &num2, &num3, &num4);
+    
+    // Calculate the sum
+    sum = calculateSum(num1, num2, num3, num4);
+    
+    // Calculate the average
+    average = calculateAverage(sum);
+    
+    // Print the sum and average
+    printf("Sum: %d\n", sum);
+    printf("Average: %.2f\n", average);
+    
+    return 0;
+}
